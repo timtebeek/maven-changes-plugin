@@ -64,7 +64,7 @@ under the License.
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
-    <url>https://ci-builds.apache.org/job/Maven/job/maven-box/job/maven-changes-plugin/</url>
+    <url>https://ci-maven.apache.org/job/Maven/job/maven-box/job/maven-changes-plugin/</url>
   </ciManagement>
   <distributionManagement>
     <site>
@@ -74,9 +74,9 @@ under the License.
   </distributionManagement>
 
   <properties>
-    <javaVersion>7</javaVersion>
+    <javaVersion>8</javaVersion>
     <doxiaVersion>1.11.1</doxiaVersion>
-    <doxiaSitetoolsVersion>1.9.2</doxiaSitetoolsVersion>
+    <doxiaSitetoolsVersion>1.11.1</doxiaSitetoolsVersion>
     <mavenVersion>3.2.5</mavenVersion>
     <sitePluginVersion>3.11.0</sitePluginVersion>
     <wagonVersion>3.5.1</wagonVersion>
@@ -208,7 +208,7 @@ under the License.
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-i18n</artifactId>
-      <version>1.0-beta-7</version>
+      <version>1.0-beta-10</version>
       <exclusions>
         <exclusion>
           <groupId>org.codehaus.plexus</groupId>
@@ -223,7 +223,7 @@ under the License.
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-utils</artifactId>
-      <version>3.0.24</version>
+      <version>3.3.1</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
@@ -434,12 +434,12 @@ under the License.
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>3.3.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.1.2</version>
+          <version>3.2.2</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -546,10 +546,6 @@ under the License.
                   <goal>clean</goal>
                   <goal>site</goal>
                 </goals>
-                <properties>
-                  <!-- e.g. ensure that Java7 picks up TLSv1.2 when connecting with Central -->
-                  <https.protocols>${https.protocols}</https.protocols>
-                </properties>
               </configuration>
             </plugin>
           </plugins>
